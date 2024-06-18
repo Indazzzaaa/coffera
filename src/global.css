@@ -5,3 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.light {
+    --background: aliceblue;
+}
+
+
+.dark{
+    --background: #2a2929;
+}
