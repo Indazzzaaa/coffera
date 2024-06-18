@@ -37,7 +37,7 @@ const App = () =>{
             <div className="flex flex-col items-center pt-16">
                 <div className="space-y-4 text-center max-w-96 max-h-32">
                 <h1 className=" font-playwrite"> Our Collection </h1>
-                    <p className="text-gray-600/50 tracking-widest  font-roboto line-clamp-3 text-[.8rem]">
+                    <p className="text-gray-600/80 tracking-widest  font-roboto line-clamp-3 text-[.8rem]">
                     Awaken Your Senses with Our Artfully Brewed <br />Coffee, Perfectly Crafted for Every Moment.<br/>
                     Where Every Cup Tells a Story.
                     </p>
