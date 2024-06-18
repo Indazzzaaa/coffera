@@ -31,9 +31,9 @@ const App = () =>{
     
     
     return(
-  <div className="min-h-screen overflow-hidden text-gray-300 bg-background">
+  <div className="min-h-screen text-gray-300 bg-background ">
     <div className=" bg-banner h-[30vh] rounded-t-md bg-cover bg-center flex align-middle justify-center relative " >
-        <div className="overflow-y-scroll absolute top-24 w-[80vw] bg-stone-900 h-[80vh] rounded-md">
+        <div className="overflow-y-scroll fixed top-24 w-[80vw] bg-stone-900 h-[80vh] rounded-md">
             <div className="flex flex-col items-center pt-16">
                 <div className="space-y-4 text-center max-w-96 max-h-32">
                 <h1 className=" font-playwrite"> Our Collection </h1>
