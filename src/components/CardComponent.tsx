@@ -8,7 +8,7 @@ interface Props{
 
 
 const CardComponent = ({name="Cappuccino",isSoldout=true,price=13.12,image_url=""}:Props) => 
-<div className="flex flex-col size-64">
+<div className="flex flex-col lg:size-128 h-64 w-[70%] ">
     <div className="bg-slate-900 h-[70%] ">
         <img src={image_url} className="object-cover w-full h-full rounded-md " />
     </div>  
@@ -17,7 +17,7 @@ const CardComponent = ({name="Cappuccino",isSoldout=true,price=13.12,image_url="
         <p>{name}</p>
         <p className="p-1 text-sm text-gray-900 bg-green-200 rounded-sm"> ${price} </p>
     </div>  
-    <div className=" text-[12px] mt-4 px-2 flex justify-between">
+    <div className=" text-[12px] mt-1 px-2 flex justify-between">
          <div className="space-x-2">
             <span className="text-yellow-500">★</span>
              <span >4.7</span>
