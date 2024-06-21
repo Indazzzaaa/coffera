@@ -5,6 +5,7 @@ interface Data{
     id:number;
     title:string;
     image:string;
+    description: string;
 }
 
 
@@ -51,7 +52,7 @@ const App = () =>{
 
             <div className="grid grid-cols-1 mt-4 justify-items-center gap-x-4 gap-y-8 lg:grid-cols-3 " >
 
-                {data?.map((_data:Data)=><CardComponent key={_data.id} name={_data.title} image_url={_data.image} isSoldout={_data.id%2==0}/>)  }
+                {data?.map((_data:Data)=><CardComponent key={_data.id} name={_data.title} image_url={_data.image} description={_data.description} isSoldout={_data.id%2==0}/>)  }
 
                  
             </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import InfoComponent from "./InfoComponent";
 
 interface Props {
@@ -5,6 +6,7 @@ interface Props {
   isSoldout?: boolean;
   price?: number;
   image_url?: string;
+  description? : string;
 }
 
 function getRandomFloat(min=1,max=4) : number {
@@ -19,11 +21,17 @@ const CardComponent = ({
   isSoldout = true,
   price = 13.12,
   image_url = "",
-}: Props) => (
-  <div className="group flex flex-col lg:size-128 h-64 w-[70%] ">
+  description = "",
+}: Props) => {
+  const [infoVisible,setInfoVisibility]=useState<boolean>(false);
+
+  
+
+
+  return (<div className="group flex flex-col lg:size-128 h-64 w-[70%] ">
     <div className="bg-slate-900 h-[70%] relative ">
       <button
-        onClick={() => console.log(`My name is ${name}`)}
+        onClick={() => setInfoVisibility(!infoVisible)}
         className="absolute hidden p-2 rounded-sm group-hover:block right-4 bg-slate-900/40"
       >
         &#9432;
@@ -47,10 +55,15 @@ const CardComponent = ({
       {isSoldout && (
         <span className="text-red-800 align-middle"> Sold out</span>
       )}
+
+      {/* Open the info panel */}
+      { infoVisible && <InfoComponent bannerImg={image_url} title={name} description={description} changeVisibilityCallback={()=> setInfoVisibility(!infoVisible)}/> }
     </div>
 
-    <InfoComponent />
-  </div>
-);
+    
+
+    
+  </div>);
+}
 
 export default CardComponent;
